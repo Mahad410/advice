@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+main {
+    background-color: hsl(218, 23%, 16%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: min-content;
+    height: auto;
+    background-color: hsl(217, 19%, 24%);
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+img {
+    width: auto;
+    object-fit: contain;
+}
+
+#advice_box {
+    text-align: center;
+    position: relative;
+}
+
+#advice_content h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 20px 0;
+    color: hsl(193, 38%, 86%);
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+.green {
+    color: hsl(150, 100%, 66%);
+}
+
+#advice_btn {
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -20px;
+    background-color: hsl(150, 100%, 66%);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#advice_btn:hover {
+    box-shadow: 0 0 10px 10px rgba(82, 255, 168, 0.6);
+    -webkit-box-shadow: 0 0 10px 10px rgba(82, 255, 168, 0.6);
+    -moz-box-shadow: 0 0 10px 10px rgba(82, 255, 168, 0.6);
+}
+
+#advice_btn img {
+    width: auto;
+    height: auto;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.loading_img {
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(150, 100%, 66%);
+    margin: 0 10px 0;
+    animation: rotate 1s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(180deg);
+    }
+    from {
+        transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #advice_content h1 {
+        font-size: 1rem;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
